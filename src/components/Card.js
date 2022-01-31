@@ -1,27 +1,33 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <div className="card">
-      <img
-        className="card-img"
-        src="https://res.cloudinary.com/dtkdsolsz/image/upload/v1643494548/katie-zaferes_jh6ctb.png"
-        alt="imagen"
-      />
-      <div className="card-description">
-        <img
-          className="star-icon"
-          src="https://res.cloudinary.com/dtkdsolsz/image/upload/v1643494548/star_r1ytve.png"
-          alt="star-icon"
-        />
-        <span className="rating-number">5.0</span>
-        <span className="light-text">(6) • </span>
-        <span className="light-text">USA</span>
+      <div className="card">
+        {badgeText && <div className="card-badge">{badgeText}</div>}
+        <img className="card-img" src={props.coverImg} alt="" />
+        <div className="card-description">
+          <img
+            src="https://res.cloudinary.com/dtkdsolsz/image/upload/v1643585632/airbnb%20experiences/star_zfnptw.png"
+            className="star-icon"
+            alt=""
+          />
+          <span className="rating-number">{props.stats.rating}</span>
+          <span className="light-text">({props.stats.reviewCount}) • </span>
+          <span className="light-text">{props.location}</span>
+        </div>
+        <p className="card-title">{props.title}</p>
+        <p className="card-price">
+          <b>From ${props.price}</b> / person
+        </p>
       </div>
-      <p className="card-title">Life lessons with Katie Zaferes</p>
-      <p className="card-price">
-        <b>From $136</b> / person
-      </p>
     </div>
   );
 };

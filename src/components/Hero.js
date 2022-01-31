@@ -2,15 +2,15 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <div className="container">
       <img
         className="hero-img"
-        src="https://res.cloudinary.com/dtkdsolsz/image/upload/v1643236848/photo-grid_aa28ax.png"
+        src="https://res.cloudinary.com/dtkdsolsz/image/upload/v1643585638/airbnb%20experiences/photo-grid_dnbk3j.png"
         alt=""
       />
       <div className="hero-description">
-        <h1 className="hero-title">Online Experiences</h1>
-        <p className="hero-paragraph">
+        <h2 className="title">Online Experiences</h2>
+        <p className="paragraph">
           Join unique interactive activities led by one-of-a-kind hosts—all
           without leaving home.
         </p>

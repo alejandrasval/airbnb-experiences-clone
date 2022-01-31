@@ -6,7 +6,7 @@ const Navbar = () => {
       <nav className="navbar">
         <img
           className="navbar-img"
-          src="https://res.cloudinary.com/dtkdsolsz/image/upload/v1643236847/airbnb-logo_by3fvj.png"
+          src="https://res.cloudinary.com/dtkdsolsz/image/upload/v1643585632/airbnb%20experiences/airbnb-logo_p2jtei.png"
           alt="airbnb-logo"
         />
       </nav>
